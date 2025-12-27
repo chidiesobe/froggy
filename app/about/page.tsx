@@ -1,4 +1,6 @@
+import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import CVViewer from '../components/CVViewer';
 import { siteSettings } from '../config/settings';
 
 export default function AboutPage() {
@@ -7,7 +9,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black text-white py-24 px-6">
       <Navigation />
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto mb-24">
         {/* Header */}
         <h1 className="text-5xl font-bold mb-4">
           About <span style={{ color: colors.primary }}>Me</span>
@@ -22,7 +24,7 @@ export default function AboutPage() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
           <div className="p-6 bg-black border rounded-lg text-center" style={{ borderColor: `${colors.primary}33` }}>
             <div className="text-4xl font-bold mb-2" style={{ color: colors.primary }}>{stats.experience}</div>
             <div className="text-gray-400">Years Experience</div>
@@ -30,10 +32,6 @@ export default function AboutPage() {
           <div className="p-6 bg-black border rounded-lg text-center" style={{ borderColor: `${colors.primary}33` }}>
             <div className="text-4xl font-bold mb-2" style={{ color: colors.primary }}>{stats.projects}</div>
             <div className="text-gray-400">Projects Done</div>
-          </div>
-          <div className="p-6 bg-black border rounded-lg text-center" style={{ borderColor: `${colors.primary}33` }}>
-            <div className="text-4xl font-bold mb-2" style={{ color: colors.primary }}>{stats.blogPosts}</div>
-            <div className="text-gray-400">Blog Posts</div>
           </div>
           <div className="p-6 bg-black border rounded-lg text-center" style={{ borderColor: `${colors.primary}33` }}>
             <div className="text-4xl font-bold mb-2" style={{ color: colors.primary }}>{stats.clients}</div>
@@ -57,20 +55,10 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* CV Download */}
-        {about.showCV && about.cvUrl && (
-          <div className="text-center">
-            <a
-              href={about.cvUrl}
-              download
-              className="inline-block px-8 py-4 text-black font-bold rounded-lg transition-all transform hover:scale-105"
-              style={{ backgroundColor: colors.primary }}
-            >
-              📄 Download CV
-            </a>
-          </div>
-        )}
+        {/* CV Viewer */}
+        <CVViewer />
       </div>
+      <Footer />
     </div>
   );
 }
