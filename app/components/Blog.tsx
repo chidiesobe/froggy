@@ -1,10 +1,10 @@
 import { siteSettings } from '../config/settings';
-import { blogPosts } from '../data/blog';
+import { getFeaturedPosts } from '../lib/markdown';
 import Link from 'next/link';
 
 export default function Blog() {
   const { colors } = siteSettings;
-  const featuredPosts = blogPosts.filter(p => p.featured).slice(0, 3);
+  const featuredPosts = getFeaturedPosts(3);
   
   return (
     <section id="blog" className="py-24 px-6" style={{ backgroundColor: colors.background }}>
@@ -17,7 +17,7 @@ export default function Blog() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {featuredPosts.map((post) => (
             <article 
-              key={post.id}
+              key={post.slug}
               className="group bg-black rounded-xl overflow-hidden border hover:border-[#00ff88] transition-all"
               style={{ borderColor: `${colors.primary}1A` }}
             >
@@ -38,9 +38,9 @@ export default function Blog() {
                 <p className="text-gray-400 mb-4">
                   {post.excerpt}
                 </p>
-                <a href="#" className="hover:underline font-semibold" style={{ color: colors.primary }}>
+                <Link href={`/blog/${post.slug}`} className="hover:underline font-semibold" style={{ color: colors.primary }}>
                   Read More →
-                </a>
+                </Link>
               </div>
             </article>
           ))}

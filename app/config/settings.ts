@@ -24,6 +24,12 @@ export const siteSettings = {
     projectsPerPage: 9,
   },
 
+  // Content Paths
+  paths: {
+    blogContent: 'content/blog', // Where blog markdown files are saved
+    projectsData: 'app/data/projects.ts', // Where project data is stored
+  },
+
   // About Page
   about: {
     showCV: true, // Set to false to hide CV download button
