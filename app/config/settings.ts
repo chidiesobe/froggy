@@ -33,7 +33,7 @@ export const siteSettings = {
   // About Page
   about: {
     showCV: true, // Set to false to hide CV download button
-    cvUrl: "/froggy.pdf", // Path to your CV file in /public folder
+    cvUrl: "/data/cv.pdf", // Path to your CV file in /public folder
     fullBio: `
         Froggy is a clean, minimal portfolio template built for developers who want to showcase their work without unnecessary complexity. It focuses on clarity, performance, and structure making it easy to present projects, experience, and technical skills in a straightforward way.
 

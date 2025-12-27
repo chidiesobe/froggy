@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block">
-              <span style={{ color: colors.primary }} className="text-sm font-mono tracking-wider">Hello, I'm</span>
+              <span style={{ color: colors.primary }} className="text-sm font-mono tracking-wider">Hello, I&apos;m</span>
             </div>
             <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
               {siteInfo.name}
@@ -42,7 +42,7 @@ export default function Hero() {
               <div className="relative w-80 h-80 border-2 rounded-full flex items-center justify-center" style={{ borderColor: colors.primary }}>
                 <div className="text-center">
                   <div className="text-6xl mb-4">👨‍💻</div>
-                  <div style={{ color: colors.primary }} className="font-mono">// code & create</div>
+                  <div style={{ color: colors.primary }} className="font-mono">code & create</div>
                 </div>
               </div>
             </div>

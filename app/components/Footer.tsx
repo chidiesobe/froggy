@@ -2,7 +2,7 @@ import Link from "next/link";
 import { siteSettings } from '../config/settings';
 
 export default function Footer() {
-  const { colors, siteInfo } = siteSettings;
+  const { colors } = siteSettings;
   
   return (
     <footer className="py-6 px-6 border-t bg-black" style={{ borderColor: `${colors.primary}1A` }}>
