@@ -28,7 +28,7 @@ export const projects: Project[] = [
     tags: ['React', 'Firebase', 'Tailwind'],
     link: '#',
     github: 'https://github.com',
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     image: '🌤️',
     tags: ['React', 'API', 'Charts.js'],
     link: '#',
-    featured: false,
+    featured: true,
   },
   {
     id: 5,
