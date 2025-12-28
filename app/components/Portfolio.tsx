@@ -27,7 +27,7 @@ export default function Portfolio() {
                 borderColor: `${colors.primary}1A`,
               }}
             >
-              <div className="h-48 bg-gradient-to-br from-[#00ff88]/20 to-black flex items-center justify-center">
+              <div className="h-48 bg-linear-to-br from-[#00ff88]/20 to-black flex items-center justify-center">
                 <div className="text-6xl">{project.image}</div>
               </div>
               <div className="p-6">

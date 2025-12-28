@@ -21,7 +21,6 @@ export const siteSettings = {
 
   // Pagination
   pagination: {
-    postsPerPage: 9,
     projectsPerPage: 9,
   },
 

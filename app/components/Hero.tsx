@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
           <div className="hidden md:flex items-center justify-center">
             <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-[#00ff88] to-[#00cc6a] rounded-full opacity-20 blur-3xl absolute"></div>
+              <div className="w-80 h-80 bg-linear-to-br from-[#00ff88] to-[#00cc6a] rounded-full opacity-20 blur-3xl absolute"></div>
               <div className="relative w-80 h-80 border-2 rounded-full flex items-center justify-center" style={{ borderColor: colors.primary }}>
                 <div className="text-center">
                   <div className="text-6xl mb-4">👨‍💻</div>

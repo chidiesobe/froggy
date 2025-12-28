@@ -177,7 +177,6 @@ Edit `app/config/settings.ts`:
 
 ```typescript
 pagination: {
-  postsPerPage: 9,      // Not used (blog removed)
   projectsPerPage: 9,   // Projects per page
 }
 ```
