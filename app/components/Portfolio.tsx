@@ -1,6 +1,7 @@
 import { siteSettings } from "../config/settings";
 import { projects } from "../data/projects";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Portfolio() {
   const { colors } = siteSettings;
@@ -27,8 +28,18 @@ export default function Portfolio() {
                 borderColor: `${colors.primary}1A`,
               }}
             >
-              <div className="h-48 bg-linear-to-br from-[#00ff88]/20 to-black flex items-center justify-center">
-                <div className="text-6xl">{project.image}</div>
+              <div className="relative h-48 bg-linear-to-br from-[#00ff88]/20 to-black overflow-hidden">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-6xl">{project.icon}</div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-[#00ff88] transition-colors">
